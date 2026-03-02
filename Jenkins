@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('fetch file') {
             steps {
-               git 'https://github.com/Pranna-Nadar/webhooks_git'
+               git 'https://github.com/Pranna-Nadar/JenkinsGitDemo.git'
             }
         }
         stage('Build file') {
