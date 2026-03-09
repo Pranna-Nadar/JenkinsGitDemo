@@ -1,0 +1,26 @@
+pipeline{
+  agent any
+  stages{
+    stage('Checkout'){
+      steps{
+        git 'https://github.com/Pranna-Nadar/JenkinsGitDemo.git'
+      }
+    }
+    stage('Publish'){
+      steps{ 
+        
+            publishHTML([
+            allowmissing:true,
+            alwaysLinktoLastBuild:false,
+            KeepAll:false,
+            reportDir:'.',
+            reportFiles:'server.html',
+            reportName:'My HTML Page'
+          ])
+      }
+  }
+ }
+}
+
+
+    
